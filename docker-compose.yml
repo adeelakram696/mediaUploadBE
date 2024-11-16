@@ -1,0 +1,20 @@
+version: '3'
+services:
+  db:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: postgres
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    command: >
+      bash -c "
+        echo 'CREATE EXTENSION IF NOT EXISTS \"uuid-ossp\";' >> /docker-entrypoint-initdb.d/init.sql
+        docker-entrypoint.sh postgres
+      "
+    ports:
+      - '5432:5432'
+volumes:
+  postgres-data:

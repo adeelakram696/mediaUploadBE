@@ -1,0 +1,15 @@
+{
+  "development": {
+    "username": "herogramtest_owner",
+    "password": "sQAhju1dU2LG",
+    "database": "herogramtest",
+    "host": "ep-frosty-mountain-a2xufzdd.eu-central-1.aws.neon.tech",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
+  }
+}
