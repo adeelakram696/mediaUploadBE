@@ -12,7 +12,7 @@
       "dest": "dist/app.js"
     }
   ],
-  "installCommand": "npm install pg",
+  "installCommand": "npm install",
   "outputDirectory": "dist",
   "buildCommand": "npm run build"
 }
